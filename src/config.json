@@ -1,13 +1,15 @@
 {
   "locals": {
     "url": "http://localhost:8080",
-    "name": "The Wintersmith's blog",
-    "owner": "Someone",
-    "description": "Ramblings of an immor(t)al demigod"
+    "name": "Marco's",
+    "owner": "Marco Leong",
+    "description": "\"The making of life, web application\""
   },
   "output": "../",
   "plugins": [
-    "./plugins/paginator.coffee"
+    "./plugins/paginator.coffee",
+    "wintersmith-sass",
+    "wintersmith-livereload"
   ],
   "require": {
     "moment": "moment",
@@ -23,5 +25,10 @@
   },
   "paginator": {
     "perPage": 3
+  },
+  "livereload": {
+    "port": 35730,
+    "clientScript": "livereload.js",
+    "liveCSS": true
   }
 }

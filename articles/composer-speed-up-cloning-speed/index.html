@@ -4,43 +4,39 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Marco's
+    <title>Speed up PHP Composer install with different protocols - Marco's
     </title>
     <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="&quot;The making of life, web application&quot;">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
     <link rel="stylesheet" href="/css/main.css">
   </head>
-  <body>
+  <body class="article-detail">
     <header class="header">
       <div class="content-wrap">
-        <div class="logo">
-          <h1><a href="http://localhost:8080">Marco's</a></h1>
-          <p class="description">&quot;The making of life, web application&quot;</p>
-        </div>
+        <h1>Speed up PHP Composer install with different protocols</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:marcogood411@gmail.com">Marco Leong</a></span>
+        </p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
-        <section class="archive">
-          <h2>Archive</h2>
-          <ul>
-            <li><span style="line-height:6.6000000000000005em" class="year-label">2013</span>
-              <ul style="margin-left:4em">
-                <li><span style="line-height:6.6000000000000005em" class="month-label">January</span>
-                  <ul style="margin-left:7em">
-                    <li style="height:2.2em;line-height:2.2em;"><a href="/articles/symfony2-find-out-loaded-documents-classname/">Symfony2 - find out loaded document classNames in DocumentManager</a></li>
-                    <li style="height:2.2em;line-height:2.2em;"><a href="/articles/composer-speed-up-cloning-speed/">Speed up PHP Composer install with different protocols</a></li>
-                    <li style="height:2.2em;line-height:2.2em;"><a href="/articles/symfony2-add-legend-in-formtype-class/">Symfony2 – add legends in a FormType class</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </section>
+        <article class="article">
+          <section class="content"><p>If you found composer is slow at cloning, you can add this to&nbsp;composer.json</p>
+<pre><code class="lang-json">// add to config section composer.json
+&quot;config&quot;: {
+    &quot;bin-dir&quot;: &quot;bin&quot;,
+    &quot;process-timeout&quot;: &quot;10000&quot;,
+    &quot;github-protocols&quot;: [&quot;https&quot;]
+},
+</code></pre>
+<p>This would change protocol use to clone from git (by default) to https which is much&nbsp;faster.</p>
+</section>
+        </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
+        <div class="nav"><a href="/">« Full blog</a></div>
         <section class="about"><p>This blog articles with code is licensed under <a href="http://opensource.org/licenses/MIT">MIT-license</a>. Any other none code content is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/deed.en_US">Creative Commons Attribution-NonCommercial 4.0 International License</a>. Besides. for articles contain code, it only valid only for small period of time. API are always changing ;)</p>
 
         </section>

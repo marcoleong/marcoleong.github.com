@@ -4,58 +4,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Marco's
+    <title>Symfony2 – add legends in a FormType class - Marco's
     </title>
     <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="&quot;The making of life, web application&quot;">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
     <link rel="stylesheet" href="/css/main.css">
   </head>
-  <body>
+  <body class="article-detail">
     <header class="header">
       <div class="content-wrap">
-        <div class="logo">
-          <h1><a href="http://localhost:8080">Marco's</a></h1>
-          <p class="description">&quot;The making of life, web application&quot;</p>
-        </div>
+        <h1>Symfony2 – add legends in a FormType class</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:marcogood411@gmail.com">Marco Leong</a></span>
+        </p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
-        <article class="article intro">
-          <header>
-            <p class="date"><span>17. January 2013</span></p>
-            <h2><a href="/articles/symfony2-find-out-loaded-documents-classname/">Symfony2 - find out loaded document classNames in DocumentManager</a></h2>
-          </header>
-          <section class="content"><p>Digged into the source code to find out how to list all the documents mapped in a document&nbsp;manager.</p>
-<pre><code>$classNames = $documentManager //DocumentManager
-    -&gt;getConfiguration()
-    -&gt;getMetadataDriverImpl()
-    -&gt;getAllClassNames();
-</code></pre>
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>06. January 2013</span></p>
-            <h2><a href="/articles/composer-speed-up-cloning-speed/">Speed up PHP Composer install with different protocols</a></h2>
-          </header>
-          <section class="content"><p>If you found composer is slow at cloning, you can add this to&nbsp;composer.json</p>
-<pre><code class="lang-json">// add to config section composer.json
-&quot;config&quot;: {
-    &quot;bin-dir&quot;: &quot;bin&quot;,
-    &quot;process-timeout&quot;: &quot;10000&quot;,
-    &quot;github-protocols&quot;: [&quot;https&quot;]
-},
-</code></pre>
-<p>This would change protocol use to clone from git (by default) to https which is much&nbsp;faster.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>05. January 2013</span></p>
-            <h2><a href="/articles/symfony2-add-legend-in-formtype-class/">Symfony2 – add legends in a FormType class</a></h2>
-          </header>
+        <article class="article">
           <section class="content"><p>In order to add extra variable in a Symfony 2 form type(in this example, the legend) in FormView, you have to implement this in your form type&nbsp;class.</p>
 <pre><code class="lang-php"><span class="keyword">use</span> <span class="title">Symfony</span>\<span class="title">Component</span>\<span class="title">Form</span>\<span class="title">FormViewInterface</span>;
 <span class="keyword">use</span> <span class="title">Symfony</span>\<span class="title">Component</span>\<span class="title">Form</span>\<span class="title">FormInterface</span>;
@@ -70,15 +35,13 @@
     ));
 }
 </code></pre>
-
-          </section>
+</section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="/archive.html">« Archives</a>
-        </div>
+        <div class="nav"><a href="/">« Full blog</a></div>
         <section class="about"><p>This blog articles with code is licensed under <a href="http://opensource.org/licenses/MIT">MIT-license</a>. Any other none code content is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/deed.en_US">Creative Commons Attribution-NonCommercial 4.0 International License</a>. Besides. for articles contain code, it only valid only for small period of time. API are always changing ;)</p>
 
         </section>
