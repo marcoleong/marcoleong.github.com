@@ -1,5 +1,5 @@
 ---
-title: "Speed up PHP Composer install with different protocols"
+title: "Composer - Speed up PHP Composer install with different protocols"
 date: 2013-01-06
 comments: true
 categories: Symfony2
