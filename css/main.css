@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
   border: 0; }
 
 body {
-  font-family: "Lora", serif;
+  font-family: 'Lora', serif;
   font-size: 21px;
   line-height: 1.52;
   background-color: #f8f8f8;
@@ -83,7 +83,7 @@ hr {
   color: #171717; }
 
 .header .author {
-  font-family: "Merriweather", serif;
+  font-family: 'Merriweather', serif;
   font-variant: small-caps;
   text-transform: lowercase;
   text-rendering: auto;
@@ -181,7 +181,7 @@ footer .copy, footer .copy a {
   width: 100%; }
 
 .more, .date {
-  font-family: "Merriweather", serif;
+  font-family: 'Merriweather', serif;
   font-variant: small-caps;
   text-transform: lowercase;
   font-weight: 400;
@@ -223,7 +223,7 @@ footer .copy, footer .copy a {
 .archive .year-label,
 .archive .month-label {
   width: 4em;
-  font-family: "Merriweather", serif;
+  font-family: 'Merriweather', serif;
   font-variant: small-caps;
   text-transform: lowercase;
   font-weight: 400;
@@ -243,7 +243,7 @@ footer .copy, footer .copy a {
 
 /* code styling */
 code {
-  font-family: "Anonymous Pro", monospace;
+  font-family: 'Anonymous Pro', monospace;
   font-size: 0.85em;
   color: #000; }
 

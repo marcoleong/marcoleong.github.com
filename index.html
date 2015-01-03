@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Marco's
     </title>
-    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="&quot;The making of life, web application&quot;">
+    <link rel="alternate" href="http://localhost/feed.xml" type="application/rss+xml" title="&quot;The making of life, web application&quot;">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
     <link rel="stylesheet" href="/css/main.css">
   </head>
@@ -14,13 +14,31 @@
     <header class="header">
       <div class="content-wrap">
         <div class="logo">
-          <h1><a href="http://localhost:8080">Marco's</a></h1>
+          <h1><a href="http://localhost">Marco's</a></h1>
           <p class="description">&quot;The making of life, web application&quot;</p>
         </div>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
+        <article class="article intro">
+          <header>
+            <p class="date"><span>03. January 2015</span></p>
+            <h2><a href="/articles/fix-yosemite-facetime-camera-webcam/">Having issue with Facetime camera after Yosemite update. Here is a fix !</a></h2>
+          </header>
+          <section class="content"><p>The Facetime camera issue happening on Yosemite has boggling quite a long day. Fortunately, there is a workaround for this issue. This happens to be an old issue with older version of Mac <span class="caps">OS</span> X, such as Maverick. It is quite simple to workaround this&nbsp;problem.</p>
+<h3 id="step-1-open-activity-monitor-">Step 1: Open “Activity&nbsp;Monitor”</h3>
+<p><img src="/articles/fix-yosemite-facetime-camera-webcam/step-1.jpg" alt="open activitiy monitor"></p>
+<h3 id="step-2-quit-vdcassistant-process">Step 2: Quit “VDCAssistant”&nbsp;process</h3>
+<p><img src="/articles/fix-yosemite-facetime-camera-webcam/step-2-1.jpg" alt="quite vdc assistant"></p>
+<p><img src="/articles/fix-yosemite-facetime-camera-webcam/step-2-2.jpg" alt="quite vdc assistant"></p>
+<p><img src="/articles/fix-yosemite-facetime-camera-webcam/step-2-3.jpg" alt="quite vdc assistant"></p>
+<h3 id="step-3-now-it-should-work-">Step 3: Now it should work&nbsp;!</h3>
+<p>Here is the source of this fix.
+<a href="http://www.usatoday.com/story/tech/columnist/2014/06/15/macbook-webcam-problems/10402219/">Click here to&nbsp;visit</a></p>
+
+          </section>
+        </article>
         <article class="article intro">
           <header>
             <p class="date"><span>17. January 2013</span></p>
@@ -51,39 +69,17 @@
 
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>05. January 2013</span></p>
-            <h2><a href="/articles/symfony2-add-legend-in-formtype-class/">Symfony2 – add legends in a FormType class</a></h2>
-          </header>
-          <section class="content"><p>In order to add extra variable in a Symfony 2 form type(in this example, the legend) in FormView, you have to implement this in your form type&nbsp;class.</p>
-<pre><code class="lang-php"><span class="keyword">use</span> <span class="title">Symfony</span>\<span class="title">Component</span>\<span class="title">Form</span>\<span class="title">FormViewInterface</span>;
-<span class="keyword">use</span> <span class="title">Symfony</span>\<span class="title">Component</span>\<span class="title">Form</span>\<span class="title">FormInterface</span>;
-
-<span class="comment">//...</span>
-
-<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">buildView</span><span class="params">(FormView <span class="variable">$view</span>, FormInterface <span class="variable">$form</span>, array <span class="variable">$options</span>)</span>
-{</span>
-    <span class="comment">//this add the label, aka legend of the form</span>
-    <span class="variable">$view</span>-&gt;vars = array_replace(<span class="variable">$view</span>-&gt;vars, <span class="keyword">array</span>(
-        <span class="string">'label'</span>        =&gt; <span class="string">'Asset'</span>,
-    ));
-}
-</code></pre>
-
-          </section>
-        </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="/archive.html">« Archives</a>
+        <div class="nav"><a href="/archive.html">« Archives</a><a href="/page/2/">Next page »</a>
         </div>
         <section class="about"><p>This blog articles with code is licensed under <a href="http://opensource.org/licenses/MIT">MIT-license</a>. Any other none code content is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/deed.en_US">Creative Commons Attribution-NonCommercial 4.0 International License</a>. Besides. for articles contain code, it only valid only for small period of time. API are always changing ;)</p>
 
         </section>
         <section class="copy">
-          <p>&copy; 2014 Marco Leong &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          <p>&copy; 2015 Marco Leong &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
           </p>
         </section>
       </div>

@@ -2,17 +2,35 @@
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Marco's</title>
-    <atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link>
-    <link>http://localhost:8080</link>
+    <atom:link href="http://localhost/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>http://localhost</link>
     <description>&quot;The making of life, web application&quot;</description>
-    <pubDate>Thu, 17 Jan 2013 08:00:00 +0800</pubDate>
+    <pubDate>Sat, 03 Jan 2015 08:00:00 +0800</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
+      <title>Having issue with Facetime camera after Yosemite update. Here is a fix !</title>
+      <link>http://localhost/articles/fix-yosemite-facetime-camera-webcam/</link>
+      <pubDate>Sat, 03 Jan 2015 08:00:00 +0800</pubDate>
+      <guid isPermaLink="true">http://localhost/articles/fix-yosemite-facetime-camera-webcam/</guid>
+      <author></author>
+      <description>&lt;p&gt;The Facetime camera issue happening on Yosemite has boggling quite a long day. Fortunately, there is a workaround for this issue. This happens to be an old issue with older version of Mac OS X, such as Maverick. It is quite simple to workaround this problem.&lt;/p&gt;
+&lt;h3 id=&quot;step-1-open-activity-monitor-&quot;&gt;Step 1: Open “Activity Monitor”&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost/articles/fix-yosemite-facetime-camera-webcam/step-1.jpg&quot; alt=&quot;open activitiy monitor&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;step-2-quit-vdcassistant-process&quot;&gt;Step 2: Quit “VDCAssistant” process&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost/articles/fix-yosemite-facetime-camera-webcam/step-2-1.jpg&quot; alt=&quot;quite vdc assistant&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost/articles/fix-yosemite-facetime-camera-webcam/step-2-2.jpg&quot; alt=&quot;quite vdc assistant&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost/articles/fix-yosemite-facetime-camera-webcam/step-2-3.jpg&quot; alt=&quot;quite vdc assistant&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;step-3-now-it-should-work-&quot;&gt;Step 3: Now it should work !&lt;/h3&gt;
+&lt;p&gt;Here is the source of this fix.
+&lt;a href=&quot;http://www.usatoday.com/story/tech/columnist/2014/06/15/macbook-webcam-problems/10402219/&quot;&gt;Click here to visit&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>Symfony2 - find out loaded document classNames in DocumentManager</title>
-      <link>http://localhost:8080/articles/symfony2-find-out-loaded-documents-classname/</link>
+      <link>http://localhost/articles/symfony2-find-out-loaded-documents-classname/</link>
       <pubDate>Thu, 17 Jan 2013 08:00:00 +0800</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/symfony2-find-out-loaded-documents-classname/</guid>
+      <guid isPermaLink="true">http://localhost/articles/symfony2-find-out-loaded-documents-classname/</guid>
       <author></author>
       <description>&lt;p&gt;Digged into the source code to find out how to list all the documents mapped in a document manager.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$classNames = $documentManager //DocumentManager
@@ -23,9 +41,9 @@
     </item>
     <item>
       <title>Composer - Speed up PHP Composer install with different protocols</title>
-      <link>http://localhost:8080/articles/composer-speed-up-cloning-speed/</link>
+      <link>http://localhost/articles/composer-speed-up-cloning-speed/</link>
       <pubDate>Sun, 06 Jan 2013 08:00:00 +0800</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/composer-speed-up-cloning-speed/</guid>
+      <guid isPermaLink="true">http://localhost/articles/composer-speed-up-cloning-speed/</guid>
       <author></author>
       <description>&lt;p&gt;If you found composer is slow at cloning, you can add this to composer.json&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-json&quot;&gt;// add to config section composer.json
@@ -40,9 +58,9 @@
     </item>
     <item>
       <title>Symfony2 – add legends in a FormType class</title>
-      <link>http://localhost:8080/articles/symfony2-add-legend-in-formtype-class/</link>
+      <link>http://localhost/articles/symfony2-add-legend-in-formtype-class/</link>
       <pubDate>Sun, 06 Jan 2013 01:49:00 +0800</pubDate>
-      <guid isPermaLink="true">http://localhost:8080/articles/symfony2-add-legend-in-formtype-class/</guid>
+      <guid isPermaLink="true">http://localhost/articles/symfony2-add-legend-in-formtype-class/</guid>
       <author></author>
       <description>&lt;p&gt;In order to add extra variable in a Symfony 2 form type(in this example, the legend) in FormView, you have to implement this in your form type class.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-php&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Symfony&lt;/span&gt;\&lt;span class=&quot;title&quot;&gt;Component&lt;/span&gt;\&lt;span class=&quot;title&quot;&gt;Form&lt;/span&gt;\&lt;span class=&quot;title&quot;&gt;FormViewInterface&lt;/span&gt;;

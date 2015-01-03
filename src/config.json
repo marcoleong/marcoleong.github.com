@@ -1,10 +1,11 @@
 {
   "locals": {
-    "url": "http://localhost:8080",
+    "url": "http://localhost",
     "name": "Marco's",
     "owner": "Marco Leong",
     "description": "\"The making of life, web application\""
   },
+  "port": 8181,
   "output": "../",
   "plugins": [
     "./plugins/paginator.coffee",
@@ -27,7 +28,7 @@
     "perPage": 3
   },
   "livereload": {
-    "port": 35730,
+    "port": 35731,
     "clientScript": "livereload.js",
     "liveCSS": true
   }
