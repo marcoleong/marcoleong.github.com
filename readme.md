@@ -1,4 +1,3 @@
+# About www.marcoleong.com
 
-# Blog
-
-The default [wintersmith](https://github.com/jnordberg/wintersmith) template
+Source of the website: [www.marcoleong.com](www.marcoleong.com)
