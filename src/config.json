@@ -1,9 +1,9 @@
 {
   "locals": {
     "url": "http://localhost",
-    "name": "Marco's",
+    "name": "MarcoL as Geek",
     "owner": "Marco Leong",
-    "description": "\"The making of life, web application\""
+    "description": "\"The making of web application\""
   },
   "port": 8181,
   "output": "../",
