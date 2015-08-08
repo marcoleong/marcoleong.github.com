@@ -1,13 +1,97 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Marco's</title>
+    <title>MarcoL as Geek</title>
     <atom:link href="http://localhost/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://localhost</link>
-    <description>&quot;The making of life, web application&quot;</description>
-    <pubDate>Sat, 03 Jan 2015 08:00:00 +0800</pubDate>
+    <description>&quot;The making of web application&quot;</description>
+    <pubDate>Sat, 08  Aug 2015 08:00:00 +0800</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Install and run dnsmasq on Mac OS X Yosemite 10.10.4</title>
+      <link>http://localhost/articles/dnsmasq-install-and-run-on-mac-os-x-yosemite-10-10-4/</link>
+      <pubDate>Sat, 08  Aug 2015 08:00:00 +0800</pubDate>
+      <guid isPermaLink="true">http://localhost/articles/dnsmasq-install-and-run-on-mac-os-x-yosemite-10-10-4/</guid>
+      <author></author>
+      <description>&lt;h1 id=&quot;preface&quot;&gt;Preface&lt;/h1&gt;
+&lt;p&gt;Good evening (at the time I’m writing this article)! Haven’t come back into this blog for long time. I guess this is not a very popular blog. BUT if you happen to be one of the visitor who come across this article. Please drop a comment if you have any suggestion or question about the article you are reading. Or it could be just a chat with me :)&lt;/p&gt;
+&lt;p&gt;Tonight we are going to go through some necessary steps to install &lt;a href=&quot;http://www.thekelleys.org.uk/dnsmasq/doc.html&quot;&gt;dnsmasq&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;what-is-dnsmasq-and-why-&quot;&gt;What is dnsmasq? and why?&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;you can skip this part if you know what it is&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It is a software that provide functionality of &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain_Name_System&quot;&gt;DNS&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol&quot;&gt;DHCP&lt;/a&gt; without complex setup procedure and configuration. This software is great tools for DevOps and Web Developer to easily setup test/dev environment for themselves or testing team.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE: This tool is great for test/dev, but not for production enviroment.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you are looking for software to use in production, please take a look at:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DNS: &lt;a href=&quot;https://en.wikipedia.org/wiki/BIND&quot;&gt;BIND&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DHCP: it is built-in to many linux distro. I’m not going to go through that in this post, but if you want more information. Please comment below.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;prerequisite&quot;&gt;Prerequisite&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Like to use command line&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; - best package manager for Mac OS X (It should be trivial to install, follow the instruction on their homepage.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;PS: Developer of Homebrew (@mxcl) posted this on Twitter &lt;a href=&quot;https://twitter.com/mxcl/status/608682016205344768?lang=en&quot;&gt;Google: 90% of our engineers use the software you wrote (Homebre…&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&quot;let-s-begin-&quot;&gt;Let’s begin…&lt;/h1&gt;
+&lt;p&gt;Install dnsmasq with Homebrew:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;brew install dnsmasq
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As instructed after this commmand finish&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Copy example config and becareful this will override config of dnsmasq if you did install it before&lt;/span&gt;
+cp /usr/local/opt/dnsmasq/dnsmasq.conf.example /usr/local/etc/dnsmasq.conf
+
+&lt;span class=&quot;comment&quot;&gt;# Copy the .plist file to Mac OS X On-boot launch directory&lt;/span&gt;
+&lt;span class=&quot;built_in&quot;&gt;sudo&lt;/span&gt; cp -fv /usr/local/opt/dnsmasq/*.plist /Library/LaunchDaemons
+&lt;span class=&quot;built_in&quot;&gt;sudo&lt;/span&gt; chown root /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&quot;configuration&quot;&gt;Configuration&lt;/h1&gt;
+&lt;p&gt;There are many options available in dnsmasq. I’m not going through every single of it for now. I will just show you what is the most basic setup to use DNS functionality.&lt;/p&gt;
+&lt;p&gt;Open &lt;code&gt;/usr/local/etc/dnsmasq.conf&lt;/code&gt; with you favorite editor&lt;/p&gt;
+&lt;p&gt;Add the following,&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-ini&quot;&gt;&lt;span class=&quot;setting&quot;&gt;user=&lt;span class=&quot;value&quot;&gt;root&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;setting&quot;&gt;group=&lt;span class=&quot;value&quot;&gt;wheel&lt;/span&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;This will force dnsmasq to run as root user. It’s because it needs to bind to a privileged port 1~1024 used by DNS protocol (port: 53). If you want to know what privileged port is, go &lt;a href=&quot;http://www.w3.org/Daemon/User/Installation/PrivilegedPorts.html&quot;&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Then add a new address record&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-ini&quot;&gt;&lt;span class=&quot;setting&quot;&gt;address=&lt;span class=&quot;value&quot;&gt;/project-jamtube.local/&lt;span class=&quot;number&quot;&gt;127.0&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There is another line that you would like to add is extra &lt;code&gt;resolv.conf&lt;/code&gt;.
+It is a file that define which DNS server your machine is using. By default, dnsmasq will use resolv.conf at path &lt;code&gt;/etc/resolv.conf&lt;/code&gt;. However, this conf file is also managed by Mac OS. This means if dnsmasq is using what Mac OS X resolv is using. Then it will try to resolve &lt;em&gt;external&lt;/em&gt; DNS record from itself. So we would like to create one here&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;sudo&lt;/span&gt; touch /etc/resolv-dnsmasq.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Edit this file and add the follow line&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-ini&quot;&gt;# This is Google public DNS server, or it could be your own DNS server
+nameserver 8.8.8.8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, here is the complete dnsmasq.conf&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-ini&quot;&gt;&lt;span class=&quot;setting&quot;&gt;user=&lt;span class=&quot;value&quot;&gt;root&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;setting&quot;&gt;group=&lt;span class=&quot;value&quot;&gt;wheel&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;setting&quot;&gt;address=&lt;span class=&quot;value&quot;&gt;/project-jamtube.local/&lt;span class=&quot;number&quot;&gt;127.0&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;setting&quot;&gt;resolv-file=&lt;span class=&quot;value&quot;&gt;/etc/resolv-dnsmasq.conf&lt;/span&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&quot;start-it-up-&quot;&gt;Start it up !&lt;/h1&gt;
+&lt;p&gt;On Mac OS, most of the daeman are managed by launchctl. It’s a tool that take care of the startup process of a daemon. Inorder to:&lt;/p&gt;
+&lt;p&gt;Start the daemon&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;sudo&lt;/span&gt; launchctl load /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Stop it&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;sudo&lt;/span&gt; launchctl unload /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You would like to have some alias setup to reload after you change the config.
+Edit your ~/.bash_profile&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-bash&quot;&gt;alias reload-dnsmasq=&lt;span class=&quot;string&quot;&gt;&quot;sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist &amp;amp;&amp;amp; sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&quot;at-last-point-dns-server-to-dnsmasq&quot;&gt;At last, point DNS server to dnsmasq&lt;/h1&gt;
+&lt;p&gt;Go to &lt;strong&gt;Network&lt;/strong&gt; preference:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost/articles/dnsmasq-install-and-run-on-mac-os-x-yosemite-10-10-4/network.jpg&quot; alt=&quot;Go to network preference&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Change &lt;strong&gt;DNS&lt;/strong&gt; to your local ip&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost/articles/dnsmasq-install-and-run-on-mac-os-x-yosemite-10-10-4/dns.jpg&quot; alt=&quot;Change DNS Entry&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;i-use-it-daily-&quot;&gt;I use it daily !&lt;/h1&gt;
+&lt;p&gt;This tool I use it every day for development and also use to setup testing for other users. It’s easy to setup and configure. You should give it a try !&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Having issue with Facetime camera after Yosemite update. Here is a fix !</title>
       <link>http://localhost/articles/fix-yosemite-facetime-camera-webcam/</link>

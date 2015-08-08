@@ -5,13 +5,13 @@ h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
 
 body {
   font-family: 'Lora', serif;
-  font-size: 21px;
+  font-size: 15px;
   line-height: 1.52;
   background-color: #f8f8f8;
   text-rendering: optimizeLegibility; }
 
 .content-wrap {
-  width: 34em;
+  width: 50em;
   margin: 0 auto; }
 
 body, a {
@@ -154,7 +154,7 @@ footer .copy, footer .copy a {
   text-align: center;
   font-weight: 400;
   margin: 0.8em 0;
-  font-size: 1.4em; }
+  font-size: 2em; }
 
 .article header h2 a {
   text-decoration: none; }
